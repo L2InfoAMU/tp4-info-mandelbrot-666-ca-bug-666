@@ -156,7 +156,7 @@ public class Complex {
             throw new ArithmeticException("divide by zero");
         }
         double m = this.squaredModulus();
-        return new Complex(this.real / m, -this.imaginary / m);
+        return new Complex(this.real / m, (this.imaginary / m)*-1);
     }
 
     /**
@@ -203,15 +203,11 @@ public class Complex {
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
+    public boolean equals(Complex o) {
+        if (this == o) {return true;}
+
+        return Helpers.doubleCompare(o.real, this.real) == 0 &&
+                Helpers.doubleCompare(o.imaginary, this.imaginary) == 0;
     }
 
     @Override
