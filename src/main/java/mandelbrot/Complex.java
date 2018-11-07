@@ -45,10 +45,10 @@ public class Complex {
     /**
      * The complex number whose square is -1
      */
-    static Complex I = new Complex(0, -1);
+    static Complex I = new Complex(0, 1);
 
     double getReal() {
-        return imaginary;
+        return real;
     }
 
     double getImaginary() {
