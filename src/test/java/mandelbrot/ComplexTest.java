@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ComplexTest {
     private final Complex onePlusI = new Complex(1,1);
@@ -75,6 +76,13 @@ public class ComplexTest {
         assertEquals(Complex.I, minusI.reciprocal());
         assertEquals(new Complex(0.5,0), two.reciprocal());
         assertEquals(new Complex(0.5,0.5), oneMinusI.reciprocal());
+    }
+
+    @Test
+    void testEquals(){
+        assertTrue(Complex.ZERO.equals(Complex.ZERO));
+        assertTrue((Complex.ZERO+Complex.ONE).equals(Complex.ONE));
+
     }
 
     @Test
