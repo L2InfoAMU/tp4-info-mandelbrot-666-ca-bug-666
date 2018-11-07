@@ -81,7 +81,7 @@ public class ComplexTest {
     @Test
     void testEquals(){
         assertTrue(Complex.ZERO.equals(Complex.ZERO));
-        assertTrue((Complex.ZERO+Complex.ONE).equals(Complex.ONE));
+        assertTrue((Complex.ZERO.add(Complex.ONE)).equals(Complex.ONE));
 
     }
 
