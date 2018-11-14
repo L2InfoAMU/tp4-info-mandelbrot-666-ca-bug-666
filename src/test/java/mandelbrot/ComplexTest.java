@@ -172,4 +172,11 @@ public class ComplexTest {
         assertEquals(onePlusI.multiply(two), new Complex(2, 2));
     }
 
+    @Test
+
+    void testSquaredModulus(){
+        assertEquals( new Complex(2,2).squaredModulus(), 8);
+        assertNotEquals(new Complex(2,2).squaredModulus(), 3);
+    }
+
 }
