@@ -179,4 +179,10 @@ public class ComplexTest {
         assertNotEquals(new Complex(2,2).squaredModulus(), 3);
     }
 
+    @Test
+    void testModulus(){
+        assertEquals(new Complex(2,2).modulus(),Math.sqrt(8));
+        assertNotEquals(new Complex(2,2).modulus(),Math.sqrt(4));
+    }
+
 }
