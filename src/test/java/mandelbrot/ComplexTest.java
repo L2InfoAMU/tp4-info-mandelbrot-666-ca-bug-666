@@ -185,4 +185,11 @@ public class ComplexTest {
         assertNotEquals(new Complex(2,2).modulus(),Math.sqrt(4));
     }
 
+    @Test
+    void testPow(){
+        assertEquals(two.pow(0), new Complex(1,0));
+        assertEquals(Complex.ONE.pow(2), Complex.ONE.multiply(Complex.ONE));
+        assertNotEquals(two.pow(0), new Complex(1,1));
+    }
+
 }
