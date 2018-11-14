@@ -192,4 +192,9 @@ public class ComplexTest {
         assertNotEquals(two.pow(0), new Complex(1,1));
     }
 
+    @Test
+    void testScale(){
+        assertEquals(two, new Complex(1,0).scale(2));
+        assertNotEquals(new Complex(2,1), new Complex(1,1).scale(2));
+    }
 }
