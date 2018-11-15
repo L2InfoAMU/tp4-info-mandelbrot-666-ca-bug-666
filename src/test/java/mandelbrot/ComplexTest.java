@@ -157,7 +157,7 @@ public class ComplexTest {
     @Test
 
     void testAdd() {
-        assertEquals(Complex.ZERO.add(new Complex(1,1)),new Complex(1,1));
+        assertEquals(Complex.ZERO.add(onePlusI,onePlusI);
         assertEquals(two.add(twoI), new Complex(2,2));
         assertNotEquals(two, twoI);
         assertNotEquals(two, "bonjour");
@@ -189,12 +189,12 @@ public class ComplexTest {
     void testPow(){
         assertEquals(two.pow(0), new Complex(1,0));
         assertEquals(Complex.ONE.pow(2), Complex.ONE.multiply(Complex.ONE));
-        assertNotEquals(two.pow(0), new Complex(1,1));
+        assertNotEquals(two.pow(0), onePlusI);
     }
 
     @Test
     void testScale(){
-        assertEquals(two, new Complex(1,0).scale(2));
-        assertNotEquals(new Complex(2,1), new Complex(1,1).scale(2));
+        assertEquals(two, Complex.ONE.scale(2));
+        assertNotEquals(new Complex(2,1), onePlusI.scale(2));
     }
 }
